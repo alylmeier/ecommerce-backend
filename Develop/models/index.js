@@ -3,7 +3,7 @@ const Product = require("./Product");
 const Category = require("./Category");
 const Tag = require("./Tag");
 const ProductTag = require("./ProductTag");
-const { Sequelize } = require("sequelize/types");
+//const { Sequelize } = require("sequelize/types");
 
 Category.hasMany(Product, {
   foreignKey: "category_id",
@@ -14,7 +14,7 @@ Product.belongsTo(Category, {
   foreignKey: "category_id",
 });
 
-ProductTag = sequelize.define("ProductTag", {}, { timestamps: false });
+//ProductTag = sequelize.define("ProductTag", {}, { timestamps: false });
 Product.belongsToMany(Tag, { through: ProductTag });
 Tag.belongsToMany(Product, { through: ProductTag });
 // Products belongToMany Tags (through ProductTag)
