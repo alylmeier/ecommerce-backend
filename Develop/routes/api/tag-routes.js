@@ -23,7 +23,6 @@ router.get("/:id", (req, res) => {
 
 router.post("/", (req, res) => {
   Tag.create(req.body)
-    //do i have to tell it to do id, or is that automatic even though the column is defined?
 
     .then((newTag) => {
       // Send the newly created row as a JSON object
